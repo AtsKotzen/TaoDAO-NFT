@@ -3,7 +3,7 @@ Moralis.serverURL = 'xxxxxx'; //Server url from moralis.io
 
 const BASE_URL = "https://api.coingecko.com/api/v3";
 const ETH_USD_PRICE_URL = "/simple/price?ids=ethereum&vs_currencies=usd";
-const TaoDAONFTTokenAddress = "0x543b201c817562C4C1743e0640b217FA894Cd08C0x6670E0C817B8c20F65a5820948A2cF67A9c60703";
+const TaoDAONFTTokenAddress = "0x6670E0C817B8c20F65a5820948A2cF67A9c60703";
 const TaoDAONFTMarketplaceAddress = "0x6a758016EfdB2c89E5E6E61174f8EdC29D85d9a5";
 let TaoDAONFTTokenInstance;
 let TaoDAONFTMarketplaceInstance;
