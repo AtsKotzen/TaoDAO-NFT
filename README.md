@@ -1,9 +1,15 @@
 # TaoDAONFT
-TaoDAONFT is a [dapp](https://www.investopedia.com/terms/d/decentralized-applications-dapps.asp) that combines aspects of social media platforms and a marketplace. It allows any (Open) user to create (Mint), buy, sell, and transfer ERC-721 tokens, which represent artworks in the form of an image, audio, or video file. It is important to clarify that ownership of the ERC-721 token proves ownership of the artwork it represents. It's similar to owning a deed to a house in that anyone can still see the house, it could appreciate or depreciate in value, but the one who owns the deed owns the house and can sell if they want.
+Kovan Network
+TaoDAONFTContractAddress:0x6670E0C817B8c20F65a5820948A2cF67A9c60703
+Payment Gateway: 0x06d535A023d27c896C73dfF40A37D293de0aEfFe
+TaoDAONFTMarketplace: 0x6a758016EfdB2c89E5E6E61174f8EdC29D85d9a5
+
+
+TaoDAONFT is a [dapp](https://www.investopedia.com/terms/d/decentralized-applications-dapps.asp) that combines aspects of social media platforms and a marketplace. It allows any user to create (Mint), buy, sell, and transfer ERC-721 tokens, which represent artworks in the form of an image, audio, or video file. It is important to clarify that ownership of the ERC-721 token proves ownership of the artwork it represents. It's similar to owning a deed to a house in that anyone can still see the house, it could appreciate or depreciate in value, but the one who owns the deed owns the house and can sell if they want.
 
 TaoDAONFT utilizes the powerful nature of [Moralis](https://moralis.io/) which takes the place of writing backend infrastructure and allows the dapp to easily populate a database using user input, emitted events in smart contracts, and balances in each user's [MetaMask](https://metamask.io/) wallet.
 
-This version of TaoDAONFT was designed to run Locally but can be configured to run on most other EVM (Ethereum Virtual Machine) compatible chains such as Binance Smart Chain or Polygon (previously Matic Network).
+This version of TaoDAONFT was designed to run on Kovan Network but can be configured to run on most other EVM (Ethereum Virtual Machine) compatible chains such as Binance Smart Chain or Polygon (previously Matic Network).
 
 ## Features
 
@@ -88,9 +94,14 @@ In Moralis, click View Details again and go to the Devchain Proxy Server tab and
 
 Copy the entire `cloudFunctions.js` file and paste it into the Cloud Function option on your server in Moralis.
 
-Then install the "Sync and Watch Contract Events" plugins under the Plugins section on your server for the four events in `TaoDAONFTMarketplace.sol` using the table names "ArtworkForSale", "ArtworkSold", "ArtworkPriceChanged", and "ArtworkRemoved". For help with adding plugins refer to [this video](https://www.youtube.com/watch?v=zn7_AYf_28E&t=819s) starting at 11:00 min.
+Then install the "Sync and Watch Contract Events" plugins under the Plugins section on your server for the four events in `TaoDAONFTMarketplace.sol` using the table names "artworkAdded", "artworkSold", "priceChanged", and "ArtworkRemoved". For help with adding plugins refer to [this video](https://www.youtube.com/watch?v=zn7_AYf_28E&t=819s) starting at 11:00 min.
 
 Once successfully added you can now simulate users interacting with TaoDAONFT locally!
+
+
+## TODO:
+- Fix "my profile" link
+- Fix URL to show NFT on IPFS link 
 
 ## License
 

@@ -60,7 +60,7 @@ Moralis.Cloud.define("getAllUsers", async (request) => {
   return results;
 });
 
-Moralis.Cloud.beforeSave("ArtworkForSale", async (request) => {
+Moralis.Cloud.beforeSave("artworkAdded", async (request) => {
   const query = new Moralis.Query("Artwork");
   query.equalTo("tokenAddress", request.object.get('tokenAddress'));
   query.equalTo("nftId", request.object.get('tokenId'));
@@ -75,7 +75,7 @@ Moralis.Cloud.beforeSave("ArtworkForSale", async (request) => {
 });
 
 Moralis.Cloud.beforeSave("ArtworkSold", async (request) => {
-  const query = new Moralis.Query("ArtworkForSale");
+  const query = new Moralis.Query("artworkAdded");
   query.equalTo("offerId", request.object.get('offerId'));
   const offer = await query.first();
 
@@ -85,7 +85,7 @@ Moralis.Cloud.beforeSave("ArtworkSold", async (request) => {
 });
 
 Moralis.Cloud.afterSave("ArtworkSold", async (request) => {
-  const soldQuery = new Moralis.Query("ArtworkForSale");
+  const soldQuery = new Moralis.Query("artworkAdded");
   soldQuery.equalTo("offerId", request.object.get('offerId'));
   const sold = await soldQuery.first();
 
@@ -126,7 +126,7 @@ Moralis.Cloud.beforeSave("ArtworkRemoved", async (request) => {
 });
 
 Moralis.Cloud.beforeSave("ArtworkPriceChanged", async (request) => {
-  const query = new Moralis.Query("ArtworkForSale");
+  const query = new Moralis.Query("artworkAdded");
   query.equalTo("offerId", request.object.get('offerId'));
   const object = await query.first();
 
@@ -149,7 +149,7 @@ Moralis.Cloud.afterSave("EthNFTOwners", async (request) => {
 });
 
 Moralis.Cloud.define("getOfferDetails", async (request) => {
-  const query = new Moralis.Query("ArtworkForSale");
+  const query = new Moralis.Query("artworkAdded");
   query.select("offerId", "tokenId", "tokenAddress", "price", "isSold", "artwork.currentOwner", "artwork.creator", "artwork.cover", "artwork.name", "artwork.fileType", "artwork.likes", "artwork.active", "artwork.royalty", "artwork.unlockableContent", 'artwork.likers');
   const queryResults = await query.find({useMasterKey: true});
   const results = [];

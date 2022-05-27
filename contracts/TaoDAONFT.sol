@@ -9,7 +9,7 @@ contract TaoDAONFT is ERC721 {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-  constructor () ERC721("TaoDAONFT", "OOM"){}
+  constructor () ERC721("TaoDAONFT", "TAO"){}
 
   struct Artwork{
     uint256 id;
