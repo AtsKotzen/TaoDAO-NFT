@@ -1,9 +1,4 @@
 # TaoDAONFT
-Kovan Network
-TaoDAONFTContractAddress:0x6670E0C817B8c20F65a5820948A2cF67A9c60703
-Payment Gateway: 0x06d535A023d27c896C73dfF40A37D293de0aEfFe
-TaoDAONFTMarketplace: 0x6a758016EfdB2c89E5E6E61174f8EdC29D85d9a5
-
 
 TaoDAONFT is a [dapp](https://www.investopedia.com/terms/d/decentralized-applications-dapps.asp) that combines aspects of social media platforms and a marketplace. It allows any user to create (Mint), buy, sell, and transfer ERC-721 tokens, which represent artworks in the form of an image, audio, or video file. It is important to clarify that ownership of the ERC-721 token proves ownership of the artwork it represents. It's similar to owning a deed to a house in that anyone can still see the house, it could appreciate or depreciate in value, but the one who owns the deed owns the house and can sell if they want.
 
